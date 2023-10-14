@@ -32,6 +32,7 @@ const Admin = () => {
                 <h5>25% Increased</h5>
             </div>
           </div>
+        
 
           </div>
       </div>
