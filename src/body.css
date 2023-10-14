@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Ubuntu:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Poppins:wght@300&family=Ubuntu:wght@300;400&display=swap");
+
+.body {
+  /* border: 2px solid black; */
+  height: 70vh;
+}
+.body img {
+  width: 100%;
+  /* height: 80%; */
+}
+
+.body_content {
+  /* border: 2px solid red; */
+  position: relative;
+  top: -25em;
+  margin-left: 17em;
+}
+.body_content h2 {
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 60px;
+  letter-spacing: 1.2px;
+}
+.body_content p {
+  font-size: 17px;
+  /* font-weight: 200; */
+  font-family: "Barlow", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.body_content button{
+    /* border: 2px solid black; */
+    width: 150px;
+    padding: 8px 0;
+    border-radius: 50px;
+    font-size: 18px;
+    /* border: 1px solid  rgba(0, 0, 0, 0.592); */
+    background-color: rgba(0, 0, 0, 0.792);
+    color: rgba(255, 255, 255, 0.905);
+    transition: 0.3s ease-in-out;
+}
+.body_content button:hover{
+    color: black;
+    /* border: 2px solid white; */
+    background-color: transparent;
+}

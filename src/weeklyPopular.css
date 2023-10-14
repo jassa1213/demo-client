@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Poppins:wght@300&family=Roboto+Mono&family=Ubuntu:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Noto+Sans+Sogdian&family=Poppins:wght@500&family=Roboto&family=Roboto+Mono:wght@100;400&family=Ubuntu:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Noto+Sans+Sogdian&family=Poppins:wght@500&family=Roboto+Mono:wght@100;400&family=Roboto:ital@0;1&family=Ubuntu:wght@300;400&display=swap");
+.weekly_popular {
+  /* border: 2px solid red; */
+  height: 53vh;
+  margin: 0 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product_card {
+  /* border: 2px solid black; */
+  height: 430px;
+  width: 300px;
+  background-color: #ffffffd8;
+  border-radius: 20px;
+  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Noto Sans Sogdian", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1px;
+}
+h1 {
+  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+.product_content img {
+  /* border: 2px solid black; */
+  width: 95%;
+  margin-left: 4%;
+  height: auto;
+  transition: 0.3s ease-in-out;
+}
+
+.product_content img:hover {
+  transform: scale(1.1);
+}
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 400px; /* Adjust the width as needed */
+  /* max-lines: 2; */
+}
+
+.product_content h4 {
+  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Noto Sans Sogdian", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 350px;
+  /* font-size: 30px; */
+}
+.product_content h5 {
+  margin-top: -3px;
+  float: right;
+}
+.product_content h5 span {
+  font-weight: bold;
+}
+.product_content button {
+  width: 37%;
+  padding: 4px 0;
+  border-radius: 30px;
+  /* border: 1px solid grey; */
+  position: relative;
+  left: 61%;
+  font-size: 14px;
+    margin-top: 5px;
+  transition: 0.3s ease-in-out;
+}
+.product_content button:hover {
+  background: black;
+  opacity: 0.9;
+  color: #fff;
+  font-size: 14.5px;
+}
+.single_product_content button{
+  /* margin: 0 10px; */
+}

@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Poppins:wght@300&family=Roboto+Mono&family=Ubuntu:wght@300;400&display=swap");
+
+.category {
+  /* border: 2px solid red; */
+  height: 43vh;
+}
+.category_heading h2 {
+  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+.category_content {
+  margin: 2em 4em 0 4em;
+  height: 30vh;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category_card {
+  /* border: 2px solid black; */
+  width: 200px;
+  height: 250px;
+  border-radius: 30px;
+  overflow: hidden;
+  /* position: relative; */
+}
+.category_card img {
+  width: 100%;
+  height: auto;
+  transition: 0.6s;
+}
+
+.category_card img:hover {
+  transform: scale(1.2);
+}
+
+.category_card_content h3{
+  text-align: center;
+  position: relative;
+  top: -10.8em;
+color: white;
+letter-spacing: 1px;
+  font-size: 22px;
+}

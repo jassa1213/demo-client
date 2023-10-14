@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+
+
 import './App.css';
+import Body from './body';
+import Brands from './brands';
+import Category from './category';
+import FeaturedProducts from './featured_products';
+import Footer from './footer';
+import HelpCenter from './help_center';
+import Navbar from './navbar';
+import NewsLetter from './newsletter';
+import Services from './services';
+import SpecialOffer from './special_offers';
+import TodaySpecial from './today_special';
+import WeeklyPopular from './weeklyPopular';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='app'>
+
+    <Navbar/>
+    <Body/>
+    <Category/>
+    <SpecialOffer/>
+    <Services/>
+    <WeeklyPopular/>
+    <TodaySpecial/>
+    <Brands/>
+    <FeaturedProducts/>
+    <NewsLetter/>
+    <HelpCenter/>
+    <Footer/>
     </div>
+    </>
   );
 }
 

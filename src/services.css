@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Poppins:wght@500&family=Roboto&family=Roboto+Mono:wght@100;400&family=Ubuntu:wght@300;400&display=swap");
+.services {
+  /* border: 2px solid red; */
+  /* height: 30vh; */
+  margin: 0 60px;
+  margin-bottom: 3em;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.services_model {
+  height: 15vh;
+  /* border: 2px solid black; */
+  width: 300px;
+  font-family: "Barlow", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", sans-serif;
+}
+.services_model h4 {
+  margin-left: 80px;
+  margin-top: -10px;
+  letter-spacing: 1px;
+}
+.services_model svg {
+  position: relative;
+  top: 35%;
+  margin-left: 20px;
+}

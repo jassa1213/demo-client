@@ -1,0 +1,48 @@
+.newsLetter_box{
+    /* border: 2px solid red; */
+    opacity:1;
+    margin: 0 60px ;
+    border-radius: 20px;
+    background-image: url("https://static.wixstatic.com/media/c837a6_837f9cd4f59146c3ad47a2bd882fedfd~mv2.png/v1/fill/w_1920,h_646,al_r,q_90,enc_auto/c837a6_837f9cd4f59146c3ad47a2bd882fedfd~mv2.png");
+    height: 40vh;
+    /* background-position:center; */
+    color: #000;
+    
+}
+.newsLetter_content{
+    /* border: 2px solid red; */
+    text-align: center;
+    position: relative;
+    top: 23%;
+
+    letter-spacing: 1px;
+
+}
+
+.newsLetter_content input{
+width: 25em;
+outline: none;
+/* overflow: hidden; */
+border: none;
+/* font-size: 20px; */
+padding: 12px;
+border-radius: 50px 0 0 50px;
+
+}
+.newsLetter_content button{
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 0 50px 50px 0 ;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+.newsLetter_content button:hover{
+    background-color: #000000dd;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+/*  */

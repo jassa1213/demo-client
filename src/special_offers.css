@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Poppins:wght@300&family=Roboto+Mono:wght@100;400&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Inter:wght@700&family=Poppins:wght@300;500&family=Roboto+Mono:wght@100;400&family=Ubuntu:wght@300;400&display=swap');
+.special_offer{
+
+    /* border: 2px solid black; */
+    height: 65vh;
+}
+.special_offer_1{
+    /* border: 2px solid black; */
+    height: 70vh;
+    width: 50%;
+    padding: 0 20px 0 60px;
+
+}
+
+.special_offer_2 {
+    /* border: 2px solid black; */
+    margin-left: 50%;
+    height: 70vh;
+    position: relative;
+    top: -70vh;
+    padding: 0 60px 0 20px;
+
+}
+.content_box{
+    /* border: 2px solid red; */
+    height: 70vh;
+}
+.content_box img{
+    width: 100%;
+    height: 58vh;
+    border-radius: 20px;
+}
+.content{
+    /* border: 2px solid red; */
+    color: #fff;
+    position: relative;
+    top: -70%;
+    margin-left: 80px;
+}
+.content p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: 'Barlow', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif;
+}
+.content h3{
+    font-size: 62px;
+    margin-top: -17px;
+    font-family: 'Barlow', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif;
+    /* margin-bottom: -2px; */
+}
+.content button{
+    width: 20%;
+    padding: 7px 0;
+    border-radius: 30px;
+    /* border: 1px solid grey; */
+    font-size: 16.5px;
+    transition: 0.4s ease-in-out;
+}
+.content button:hover{
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+}

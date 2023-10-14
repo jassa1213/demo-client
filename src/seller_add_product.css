@@ -1,0 +1,112 @@
+.seller_add_product {
+  /* border: 2px solid black; */
+  height: 88vh;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  /* padding-left: 40px; */
+}
+
+.sidebar_mid h2 {
+  padding-bottom: 20px;
+  letter-spacing: 2.5px;
+  margin-top: -14px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+}
+.sidebar_mid .search_seller_product input {
+  position: relative;
+  top: 30px;
+  width: 26%;
+  padding: 6px 18px;
+  left: 70%;
+  border: 1px solid #333;
+  border-radius: 30px;
+  letter-spacing: 1.2px;
+  font-size: 19px;
+}
+
+.seller_add_product_left {
+  width: 59%;
+  height: 800px;
+  /* min-height: auto; */
+  /* display: flex; */
+  flex-wrap: wrap;
+  border-top: 1.5px solid #333;
+  /* border: 2px solid red; */
+  /* background-color: #fff; */
+  /* padding-left: 20px; */
+  /* margin-left: 20px; */
+  padding-left: 10px;
+}
+
+.seller_add_product_left input[type="text"],
+select {
+  padding: 10px;
+  margin-left: 35px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  height: 50px;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+  width: 40%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  outline: none;
+}
+.seller_add_product_left input[type="file"] {
+  border: 1px solid black;
+  padding: 10px;
+
+  height: 50px;
+  width: 85.5%;
+  margin-top: 40px;
+  margin-left: 40px;
+  letter-spacing: 1.2px;
+
+  border-radius: 10px;
+}
+.seller_add_product_left span {
+  position: relative;
+  float: right;
+  right: 70px;
+  letter-spacing: 1.2px;
+  font-size: 17px;
+  top: -35px;
+}
+.seller_add_product_left button {
+  margin-left: 42%;
+  margin-top: 5.5%;
+  padding: 5px 20px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.seller_add_product_left button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.seller_add_product_left textarea {
+  position: relative;
+  outline: none;
+  border-radius: 10px;
+  height: 50px;
+  padding: 10px;
+  width: 40%;
+  /* resize: none; */
+  font-size: 18px;
+  letter-spacing: 1.2px;
+
+  border: 1px solid #000;
+  margin-left: 30px;
+  top: 20px;
+}
+
+.seller_add_product_right {
+  width: 43%;
+  /* border: 2px solid black; */
+}

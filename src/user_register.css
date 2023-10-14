@@ -1,0 +1,59 @@
+.user_register_content {
+  /* border: 2px solid black; */
+  margin-top: 10px;
+}
+.user_register_content form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.user_register_content h2 {
+  text-align: center;
+  letter-spacing: 3px;
+}
+.user_register_content input {
+  width: 40%;
+  margin: 30px 23px;
+  padding: 10px 40px;
+  font-size: 17px;
+  border: 1.5px solid #333;
+  letter-spacing: 1px;
+}
+.user_register_content select {
+  margin: 28px 40px;
+  height: 50px;
+  width: 39%;
+  position: relative;
+  left: 20px;
+  border: 1.5px solid #333;
+  padding: 8px;
+  border-radius: 10px;
+  outline: none;
+}
+.user_register_content svg {
+  position: relative;
+  top: 40px;
+  left: 63px;
+}
+.user_register_content button {
+  /* background-color: #333; */
+  /* color: #fff; */
+  font-size: 19px;
+  border: 2px solid black;
+  /* border: none; */
+  text-align: center;
+  outline: none;
+  padding: 6px 28px;
+  letter-spacing: 1.2px;
+  position: relative;
+  left: 40%;
+  top: 20px;
+  border-radius: 30px;
+  margin-left: 2em;
+  transition: 0.3s ease-in-out;
+}
+.user_register_content button:hover {
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0);
+  color: #fff;
+}
