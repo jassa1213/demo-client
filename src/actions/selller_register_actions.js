@@ -14,8 +14,6 @@ const sellerRegisterAction = (userData) => async (dispatch) => {
     dispatch({ type: REGISTER_USER_SUCCESS });
     console.log(response.data.message);
 
-    // You can handle success behavior, such as redirecting the user.
-
   } catch (error) {
     console.log("Error response from server:", error);
     let errorMessage = "An error occurred"; // Default error message

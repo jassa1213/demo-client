@@ -1,0 +1,55 @@
+.cart {
+  /* border: 2px solid red; */
+  height: 100vh;
+  position: relative;
+}
+.cart_product {
+  /* border: 2px solid black; */
+  height: 100px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: flex;
+}
+.cart_product img {
+  width: 100px;
+  /* height: 95px; */
+}
+.cart h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 12.6em;
+  margin-top: 10px;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+}
+.cart h6 {
+  /* margin-left: 120px; */
+  margin-top: 2px;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.cart_product_content {
+  padding-left: 10px;
+  padding-top: 3px;
+}
+.cart p {
+  margin-bottom: 8px;
+}
+.cart button {
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto;
+  padding: 5px 50px;
+  border: 2px solid black;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  transition: 0.3s ease-in-out;
+}
+
+.cart button:hover {
+  background: #b4b2b2c1;
+}
+.empty_cart p{
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px 20px;
+}

@@ -8,6 +8,9 @@ import addProductAction from "./actions/add_product_action";
 import Loading from "./loading";
 
 const SellerAddProduct = () => {
+  const preset_key = "shopnest";
+  const cloud_name = "notesprofile";
+
   const [productData, setProductData] = useState({
     productName: "",
     productDescription: "",
@@ -18,6 +21,7 @@ const SellerAddProduct = () => {
     size: "",
     productDetails: "",
     category: "",
+    image:null,
     username: localStorage.getItem("sellerUsername")
   });
   const handleChange = (e) => {
@@ -30,33 +34,43 @@ const SellerAddProduct = () => {
   const dispatch = useDispatch();
   const addProductSelector = useSelector((state) => state.addProduct);
   const { loading, error } = addProductSelector;
-  const [image, setImage] = useState("");
-  const preset_key = "shopnest";
-  const cloud_name = "notesprofile";
-
+  
   useEffect(() => {
     if (error) {
       console.log(error);
     }
   }, [error]);
-
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
     const imageData = new FormData();
     imageData.append("file", file);
     imageData.append("upload_preset", preset_key);
-    await axios
-      .post(
-        `http://api.cloudinary.com/v1_1/${cloud_name}/image/upload`,
+  
+    try {
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/${cloud_name}/image/upload`,
         imageData
-      )
-      .then((res) => {
-        setImage(res.data.secure_url);
-      })
+      );
+  
+      // Get the secure URL of the uploaded image from the Cloudinary response
+      const secureUrl = response.data.secure_url;
+  
+      // Now, you can apply the transformation to the secure URL as needed
+      // For example, you can add the transformation parameters like this:
+      const transformedUrl = secureUrl.replace('/upload/', '/upload/c_fill,h_350,w_340/');
+  
+      // Set the transformed URL in your state or do further processing as needed
+      console.log(transformedUrl)
 
-      .catch((err) => console.log(err));
+      setProductData({
+        ...productData,
+        image: transformedUrl
+      });
+    } catch (err) {
+      console.log(err);
+    }
   };
-
+  
   const handleAddProduct = async (e) => {
     e.preventDefault();
     dispatch(addProductAction(productData));
@@ -160,14 +174,14 @@ const SellerAddProduct = () => {
 
               <input
                 type="file"
-                accept=".png"
                 placeholder="Image"
                 name="product_image"
                 onChange={handleImageUpload}
                 multiple
               />
               <br />
-              {!image && <span>Image of product</span>}
+              {!productData.image && <span>Image of product</span>}
+
 
               <button onClick={handleAddProduct}>Submit</button>
             </div>

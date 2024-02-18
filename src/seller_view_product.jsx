@@ -1,24 +1,32 @@
 import React, { useEffect } from "react";
 import DashboardLeft from "./dashboard_left";
 import DashboardRight from "./dashboard_right";
-import "./seller_add_product.css";
-import axios from "axios";
+import { useSelector, useDispatch } from 'react-redux';
+import getProductsBySellerAction  from './actions/get_products_by_seller_action';
 
 const SellerViewProduct = () => {
-  useEffect(() => {
-    const sellerUsername = localStorage.getItem("sellerUsername");
-    console.log("Stored Username:", sellerUsername);
 
-    // Make a GET request to fetch products by seller username
-    axios
-      .get(`http://localhost:1213/product/get-products/${sellerUsername}`)
-      .then((response) => {
-        console.log(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-      });
-  }, []);
+  const sellerUsername = localStorage.getItem('sellerUsername');
+  const dispatch = useDispatch();
+  const { products, loading, error } = useSelector((state) => state.getProductsBySeller);
+    
+
+  useEffect(() => {
+    dispatch(getProductsBySellerAction(sellerUsername));
+  }, [dispatch, sellerUsername]);
+
+
+  useEffect(() => {
+    if (loading) {
+      // Handle loading state if needed
+    } else if (error) {
+      // Handle error state if needed
+      console.error('Error fetching products:', error);
+    } else {
+      // Access products data
+      console.log('Fetched products:', products);
+    }
+  }, [loading, error, products]);
 
   return (
     <>
@@ -35,17 +43,18 @@ const SellerViewProduct = () => {
               style={{ margin: "-5px 10px" }}
             >
               <div className="all_products">
-                <div className="single_product">
-                  <img
-                    src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e4aed3c6720e446aa1_airpod%20max-min.png"
-                    alt=""
-                  />
-                  <div className="single_product_content">
-                    <span>Airpods Max </span> <h5>50$</h5>
-                    <p>A perfect balance of high-fidelity audio</p>
-                    <button>View Product</button>
-                  </div>
-                </div>
+  {loading && <p>Loading products...</p>}
+      {error && <p>Error fetching products: {error}</p>}
+      {products.map((product) => (
+        <div className="single_product" key={product._id}>
+          <img src={`${product.image}`} alt={product.name} />
+          <div className="single_product_content">
+            <span>{product.productName}</span> <h5>${product.marketPrice}</h5>
+            <p>{product.productDescription}</p>
+            <button>View Product</button>
+          </div>
+        </div>
+      ))}
 
                 <div className="single_product">
                   <img

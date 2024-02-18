@@ -1,7 +1,9 @@
 import React from 'react'
 import "./body.css"
+import { useNavigate } from 'react-router'
 
 const Body = () => {
+  const navigate = useNavigate()
   return (
     <>
     <div className="body">
@@ -10,7 +12,7 @@ const Body = () => {
     <div className="body_content">
       <h2>Your Ultimate destination <br /> for shopping.</h2>
       <p>Get more for less on selected brands</p>
-      <button>Shop Now</button>
+      <button onClick={()=>{navigate("/products")}}>Shop Now</button>
     </div>
     </div>
     </>

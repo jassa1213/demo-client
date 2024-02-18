@@ -1,49 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import logo from "./logo.png";
-import { useDispatch,useSelector } from 'react-redux'; 
-import  loginUser  from "./actions/user_login_actions";
-import Loading from "./loading"
+import { useDispatch, useSelector } from "react-redux";
+import loginUser from "./actions/user_login_actions";
+import Loading from "./loading";
 import { useNavigate } from "react-router";
-
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const UserLogin = () => {
-  const [email, setEmail] = useState(""); 
-  const [password, setPassword] = useState(""); 
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Email is required"),
+      password: Yup.string()
+        .min(8, "Password must be at least 8 characters")
+        .required("Password is required"),
+    }),
+    onSubmit: (values) => {
+      // Handle form submission with the form values
+      console.log(values);
+    },
+  });
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const userLogin = useSelector((state)=>state.userLogin)
-  const {loading,error,userInfo} = userLogin
+  const userLogin = useSelector((state) => state.userLogin);
+  const { loading, error, userInfo } = userLogin;
 
   const handleUserLogin = async () => {
-    dispatch(loginUser(email, password))
+    dispatch(loginUser(formik.values.email, formik.values.password));
   };
 
   useEffect(() => {
-      if(userInfo){
-        navigate("/")
-      }
-      if(error){
-        console.log(error)
-      }
-  }, [userInfo,navigate,error])
-  
+    if (userInfo) {
+      navigate("/");
+    }
+    if (error) {
+      console.log(error);
+    }
+  }, [userInfo, navigate, error]);
 
-  
-  const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
   return (
     <>
-
-<nav className="navbar">
+      <nav className="navbar">
         <div className="navbar_logo">
           <img src={logo} alt="" width="270px" />
         </div>
         <div className="navbar_auth_right">
-      <button >Register</button>
-      <button className='active'>Login</button>
+          <button>Register</button>
+          <button className="active">Login</button>
         </div>
       </nav>
       <div className="send_email">
@@ -56,49 +66,62 @@ const UserLogin = () => {
         <div className="send_email_right">
           <div className="send_email_content">
             <h2>USER &nbsp; LOGIN </h2>
-        {loading && <Loading />}
+            {loading && <Loading />}
             <br />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="34"
-              viewBox="0 0 24 24"
-              width="34"
-              style={{ position: "relative", left: "66px", top: "-3px" }}
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-            </svg>
-            <input type="text" placeholder="Email address" 
-        value={email}
-        onChange={(e) => setEmail(e.target.value)} />
+            <form onSubmit={formik.handleSubmit}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="34"
+                viewBox="0 0 24 24"
+                width="34"
+                style={{ position: "relative", left: "66px", top: "-3px" }}
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Email address"
+                id="email"
+                name="email"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.touched.email && formik.errors.email && (
+  <div style={{ color: 'red', marginLeft:"4em"}}>{formik.errors.email}</div>
 
-            <br />
-            <br />
+              )}
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="34"
-              viewBox="0 0 24 24"
-              width="34"
-              style={{ position: "relative", left: "66px", top: "-3px" }}
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
-            </svg>
-            <input   type={showPassword ? 'text' : 'password'} placeholder="Enter password"  value={password}
-        onChange={(e) => setPassword(e.target.value)} />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="28"
-              viewBox="0 0 24 24"
-              width="28"
-              style={{ position: "relative", left: "-60px", top: "-2px" }}
-              onClick={togglePasswordVisibility}
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
-            </svg>
-            <button onClick={handleUserLogin}>Login</button>
+              <br />
+              <br />
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="34"
+                viewBox="0 0 24 24"
+                width="34"
+                style={{ position: "relative", left: "66px", top: "-3px" }}
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" />
+              </svg>
+              <input
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.password}
+              />
+              
+
+              {formik.touched.password && formik.errors.password && (
+  <div style={{ color: 'red', marginLeft:"4em"}}>{formik.errors.password}</div>
+              )}
+
+              <button onClick={handleUserLogin}>Login</button>
+            </form>
             {/* {loading ? 'on' : 'off'} */}
             <br />
 
@@ -106,8 +129,7 @@ const UserLogin = () => {
             <p className="span">
               Don't have an account? &nbsp; &nbsp;
               <a href="www.google.com">Sign up</a>
-
-      {/* {error && <p className="error">{error}</p>} */}
+              {/* {error && <p className="error">{error}</p>} */}
             </p>
           </div>
         </div>
@@ -116,5 +138,4 @@ const UserLogin = () => {
   );
 };
 
-
-export default UserLogin
+export default UserLogin;

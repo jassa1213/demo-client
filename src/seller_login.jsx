@@ -54,6 +54,7 @@ const SellerLogin = () => {
               <img
             src="https://res.cloudinary.com/notesprofile/image/upload/v1695634638/Screenshot_1445-03-10_at_13.51.06_ckoi7r.png"
                 alt=""
+        
               />
             </div>
             <div className="send_email_right">

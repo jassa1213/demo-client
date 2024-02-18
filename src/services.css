@@ -2,8 +2,9 @@
 .services {
   /* border: 2px solid red; */
   /* height: 30vh; */
-  margin: 0 60px;
-  margin-bottom: 3em;
+  margin: 0 30px;
+  margin-bottom: 2em;
+  margin-top: -2em;
   background-color: #fff;
   border-radius: 20px;
   display: flex;

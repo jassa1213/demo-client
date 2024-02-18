@@ -10,10 +10,11 @@
   justify-content: space-between;
 }
 .product_card {
-  /* border: 2px solid black; */
+  /* border: 1px solid black; */
   height: 430px;
   width: 300px;
   background-color: #ffffffd8;
+  padding: 10px;
   border-radius: 20px;
   font-family: "Barlow", sans-serif;
   font-family: "Inter", sans-serif;
@@ -47,7 +48,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 400px; /* Adjust the width as needed */
+  max-width: 290px; /* Adjust the width as needed */
   /* max-lines: 2; */
 }
 
@@ -89,7 +90,4 @@ h1 {
   opacity: 0.9;
   color: #fff;
   font-size: 14.5px;
-}
-.single_product_content button{
-  /* margin: 0 10px; */
 }

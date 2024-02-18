@@ -5,10 +5,11 @@ import {
 } from './action_types';
 import axios from 'axios';
 
-const editProductAction = (productData) => async (dispatch) => {
+const editProductAction = (productId,productData) => async (dispatch) => {
   try {
     dispatch({ type: EDIT_PRODUCT_REQUEST });
-    const response = await axios.post('http://localhost:1213/product/edit-product/:productId', productData);
+    console.log(productData)
+    const response = await axios.put(`http://localhost:1213/product/edit-product/${productId}`, productData);
     console.log(response)
     dispatch({ type: EDIT_PRODUCT_SUCCESS, payload: response.data });
   } catch (error) {

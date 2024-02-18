@@ -1,0 +1,26 @@
+/* PaymentCancellation.css */
+
+.payment_cancellation {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    /* text-align: center; */
+  }
+  
+  
+.payment_cancellation  h2 {
+    color: #ff0000; /* Red */
+    margin-right: 5px;
+  }
+  
+.payment_cancellation  p {
+    font-size: 1.2em;
+
+  }
+  
+  

@@ -42,12 +42,14 @@
   width: 350px;
   border: 1px solid grey;
   padding: 10px;
+  padding-top: 20px;
   border-radius: 20px;
   margin-bottom: 20px;
 }
 .single_product img {
   margin-left: 2%;
   width: 98%;
+  padding-top: 20px;
   height: auto;
   transition: 0.4s ease-in-out;
   overflow: hidden;

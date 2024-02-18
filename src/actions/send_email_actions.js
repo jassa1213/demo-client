@@ -12,6 +12,7 @@ const sendEmailAction = (user_email) => async (dispatch) => {
 
     const response = await axios.post("http://localhost:1213/user/send-otp", {email:user_email} , config);
     dispatch({ type: SEND_EMAIL_SUCCESS, payload: response });
+    localStorage.setItem("email",user_email)
     console.log(response);
   } catch (error) {
     console.log("Error response from server:", error);

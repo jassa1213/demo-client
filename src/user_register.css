@@ -13,28 +13,31 @@
 }
 .user_register_content input {
   width: 40%;
-  margin: 30px 23px;
-  padding: 10px 40px;
+  /* margin: 30px 23px; */
+  /* padding: 10px 40px; */
   font-size: 17px;
   border: 1.5px solid #333;
   letter-spacing: 1px;
 }
-.user_register_content select {
-  margin: 28px 40px;
-  height: 50px;
-  width: 39%;
-  position: relative;
-  left: 20px;
-  border: 1.5px solid #333;
-  padding: 8px;
-  border-radius: 10px;
-  outline: none;
+.error_input input {
+  width: 90%;
+}
+.error_input select  {
+  width: 100%;
 }
 .user_register_content svg {
   position: relative;
-  top: 40px;
-  left: 63px;
+  top: 38px;
+  left: 40px;
 }
+form .error-message {
+  color: red;
+  /* margin-top: 5em; Adjusted margin for better spacing */
+  margin-left: 2em;
+  position: relative;
+  /* left: -20em; */
+}
+
 .user_register_content button {
   /* background-color: #333; */
   /* color: #fff; */
@@ -56,4 +59,17 @@
   letter-spacing: 1px;
   background-color: rgba(0, 0, 0);
   color: #fff;
+}
+.error_input {
+  /* border: 2px solid red; */
+  height: 13vh;
+}
+.error_input select {
+  width: 70%; /* Set the same width as the input */
+  font-size: 17px; /* Match the font size of the input */
+  border: 1.5px solid #333; /* Match the border style of the input */
+  letter-spacing: 1px;
+  /* margin-top: 10px; Add margin to separate input and select */
+  /* margin-left: -10px; */
+/* margin-right: 70px; */
 }

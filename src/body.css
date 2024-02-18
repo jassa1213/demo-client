@@ -5,6 +5,7 @@
 .body {
   /* border: 2px solid black; */
   height: 70vh;
+  margin-top: -10px;
 }
 .body img {
   width: 100%;

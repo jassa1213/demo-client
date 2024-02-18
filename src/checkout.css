@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500&family=Poppins:ital,wght@0,300;1,200&display=swap");
+.checkout {
+  background: #e9e7e7c1;
+  min-height: 100vh;
+}
+.checkout_boxes {
+  /* border: 2px solid black; */
+  display: flex;
+}
+.checkout_cart {
+  /* border: 2px solid red; */
+  width: 70%;
+  height: auto;
+  padding: 10px 40px;
+}
+.checkout_cart h5 {
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  font-family: "Times New Roman", Times, serif;
+}
+.checkout_bill {
+  /* border: 2px solid black; */
+  width: 30%;
+  position: fixed;
+  margin-left: 70%;
+  height: 86vh;
+}
+
+.checkout_cart_table {
+  margin: 20px 10px;
+  border: 2px solid #b0b0b0c1;
+  height: auto;
+
+  border-radius: 20px;
+}
+.checkout_cart_product {
+  /* border: 2px solid black; */
+  margin: 30px 20px;
+  height: 130px;
+  display: flex;
+  /* width: 96%; */
+}
+.checkout_cart_product img {
+  width: 150px;
+  height: 120px;
+}
+.checkout_cart_product_content {
+  padding-left: 10px;
+  padding-top: 3px;
+}
+.quantity-control {
+  display: flex;
+}
+
+.quantity {
+  font-size: 18px;
+  margin: 0 10px;
+}
+.quantity-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0px 8px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: -8px;
+}
+.remove-button {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  margin-left: 3em;
+  color: #757272;
+  transition: 0.3s ease-in-out;
+}
+
+.remove-button:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.quantity-price {
+  margin-right: 3em;
+}
+.checkout_bill h5 {
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  font-family: "Times New Roman", Times, serif;
+}
+.checkout_bill_table {
+  height: 31vh;
+  border-radius: 20px;
+  margin: 20px 10px;
+  display: flex;
+  background: #fff;
+  /* border: 2px solid #b0b0b0c1; */
+}
+.checkout_bill_table_content {
+  /* border: 2px solid black; */
+  width: 100%;
+  padding: 20px;
+}
+.checkout_bill_table_content h2 span {
+  position: relative;
+  float: right;
+}
+.checkout_bill_table_content h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+}
+.checkout_bill_table_content button {
+  width: 100%;
+  margin-top: 12px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  padding: 5px;
+  background: #cac9c9c1;
+}
+.cart_empty {
+  /* border: 2px solid red; */
+  min-height: 70vh;
+  position: relative;
+  border-radius: 20px;
+}
+.cart_empty img {
+  position: absolute;
+  height: 78vh;
+  background-position: center;
+  padding: 2px 2px;
+  border-radius: 20px;
+  width: 100%;
+}
+.cart_empty h2 {
+  font-family: "Edu TAS Beginner";
+  font-size: 40px;
+  text-align: center;
+  padding-top: 4.8em;
+}
+.cart_empty_content {
+  position: relative;
+}
+.cart_empty_content button {
+  display: block; /* Make the button a block-level element */
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 5px 20px;
+  border-radius: 30px;
+  font-size: 19px;
+  transition: 0.3s ease-in-out;
+  border: none;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+.cart_empty_content button:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #000;
+}
+td {
+  /* border: 2px solid red; */
+  padding-right: 60px;
+}

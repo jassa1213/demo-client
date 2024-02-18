@@ -1,0 +1,25 @@
+/* OrderConfirmation.css */
+
+.order_confirmation {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  
+.order_confirmation  h2 {
+    color: #00ff00; /* Green */
+    margin-right: 5px;
+
+  }
+  
+.order_confirmation  p {
+    font-size: 1.2em;
+  }
+  
+  
